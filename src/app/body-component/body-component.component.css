@@ -1,0 +1,438 @@
+/* .bodyDivOne {
+    background-image: url('../../assets/feed-image-5.png');
+    background-repeat: no-repeat;
+    background-attachment: none;
+    background-size: cover;
+    background-position: center center;
+}
+.bodyDivTwo {
+  background-image: url('../../assets/bookAppointment.png');
+  background-repeat: no-repeat;
+  padding-left:30px ;
+  height:65vh;
+}
+#leftbox {
+    float: left;
+    height: 40vh;
+    width: 50%;
+    color: gold;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+#middlebox {
+    float: left;
+    height: 40vh;
+    width: 50%;
+    color: gold;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+#rightbox {
+    float: right;
+    background: blue;
+    width: 45%;
+    height: 40vh;
+    color: gold;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+a:link {
+    text-decoration: none;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+.container {
+  padding: 16px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 40%;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: red;
+  cursor: pointer;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+} 
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+} */
+
+.hero {
+  /* background-image: url('../3.jpg'); */
+  background-image: url('../../assets/images/4.JPG');
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 250px 0;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: #fff;
+}
+.features {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.feature {
+  margin-bottom: 40px;
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.feature h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 18px;
+  color: #555;
+}
+.bodyDivTwo {
+  background-image: url('../../assets/bookAppointment.png');
+  background-repeat: no-repeat;
+  padding-left:30px ;
+  height:65vh;
+}
+
+/* Styles for the Safety Measures section */
+#safety-measures {
+  /* background-color: #f4f4f4; */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#safety-measures h2 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#safety-measures p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+#safety-measures ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#safety-measures li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#safety-measures li strong {
+  font-weight: bold;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+/*  */
+#book-appointment {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#book-appointment h2 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#book-appointment p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Styles for the form */
+#appointment-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+/*  */
+#leftbox {
+  float: left;
+  width: 50%;
+  color: gold;
+}
+#rightbox {
+  float: right;
+  width: 45%;
+  height: 40vh;
+}
+/* Model popup  */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.loginbtn{
+  background-color: green;
+  border-radius: 5px;
+  padding: 8px 14px;
+  color:white;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+.modal1 {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+.container {
+  padding: 16px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 40%;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: red;
+  cursor: pointer;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+} 
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  /* color: #f1f1f1; */
+  color:#000;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

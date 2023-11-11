@@ -1,0 +1,109 @@
+.parent {
+  margin: 0rem;
+  padding: 0rem 2rem;
+  text-align: center;
+}
+
+.child {
+  display: inline-block;
+  padding: 0rem 1rem;
+  vertical-align: middle;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.overlay-text-Name{
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin-left: 27px;
+  font-size: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.overlay-text-Customer{
+  position: absolute;
+  top: 85%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin-left: 27px;
+  font-size: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* Schedule Debit card popup */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-left:40px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*  */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+input[type="time"],#day{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: auto;
+}
+.child1 {
+  width:500px;
+  display: inline-block;
+  /* padding: 0rem 1rem; */
+  vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+<header>
+  <nav>
+    <div class="container">
+      <img src="../../assets/images/backgroundIcon.png" style="width: 60px;">
+      <ul *ngIf=!flag>
+        <li><a href="#">Home</a></li>
+        <li><a href="accountTypes">Accounts</a></li>
+        <li><a href="contacts">Contact</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#" (click)="login()">Login</a></li>
+      </ul>
+      <div class="nav-user-icon" *ngIf=imageSrcFlag1>
+        <img src="../../assets/images/User.png">
+        <a href="#" (click)="logout()" style="padding-left:5px;">Logout</a>
+      </div>
+      <div class="nav-user-icon" *ngIf=imageSrcFlag2>
+        <img [src]="imageSrc">
+        <a href="#" (click)="logout()" style="padding-left:5px;">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>

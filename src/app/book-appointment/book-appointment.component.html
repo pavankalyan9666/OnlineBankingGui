@@ -1,0 +1,64 @@
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label"> Full Name </label>
+        <input type="text" [(ngModel)]="fullName" placeholder="Full Name" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+      </div>
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label"> Phone Number </label>
+        <input type="text" [(ngModel)]="phoneNumber" placeholder="Enter your phone number" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+      </div>
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label"> Email Address </label>
+        <input type="email" [(ngModel)]="email" placeholder="Enter your email" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+      </div>
+      <div class="flex flex-wrap formbold--mx-3">
+        <div class="w-full sm:w-half formbold-px-3">
+          <div class="formbold-mb-5 w-full">
+            <label class="formbold-form-label"> Date </label>
+            <input type="date" [(ngModel)]="date" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+          </div>
+        </div>
+        <div class="w-full sm:w-half formbold-px-3">
+          <div class="formbold-mb-5">
+            <label class="formbold-form-label"> Time </label>
+            <input type="time" [(ngModel)]="time" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="formbold-mb-5 formbold-pt-3">
+        <label class="formbold-form-label formbold-form-label-2">
+          Address Details
+        </label>
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <input type="text" [(ngModel)]="locality" placeholder="Enter area" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <input type="text" [(ngModel)]="city" placeholder="Enter city" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <input type="text" [(ngModel)]="state" placeholder="Enter state" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <input type="text" [(ngModel)]="pinCode" placeholder="Post Code" [ngModelOptions]="{standalone: true}" class="formbold-form-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="formbold-btn" (click)="bookAppointment()">Book Appointment</button>
+      </div>
+    </form>
+  </div>
+</div>

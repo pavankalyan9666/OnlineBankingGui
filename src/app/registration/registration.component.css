@@ -1,0 +1,104 @@
+/* Add your CSS styling here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-form {
+    background-color: #ffffff;
+    max-width: 900px;
+    height: 625px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-container {
+    display: none;
+    height: 500px;
+}
+
+.active {
+    display: block;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"], #gender, #maritialstatus, #citizen{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+    margin-right: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #bbb;
+}
+/*  */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    height:20vh;
+    text-align: center;
+    font-family: arial;
+  }
+  #leftbox {
+    float: left;
+    height: 40vh;
+    width: 50%;
+    /* color: gold; */
+    /* background-color: rgba(1, 1, 1, 0.5); */
+}
+#rightbox {
+    float: right;
+    /* background: blue; */
+    width: 45%;
+    height: 40vh;
+    /* color: gold; */
+    /* background-color: rgba(1, 1, 1, 0.5); */
+}

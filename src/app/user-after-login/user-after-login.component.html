@@ -1,0 +1,497 @@
+<div style="height:105vh;background-color:#eee;">
+    <section>
+        <section class="tabs-container bg-dark">
+            <label for="tab1" (click)="tabHome()"> <i class="fa fa-home" style="color:silver"></i>&emsp;Home </label>
+            <label for="tab2" (click)="tabOpen()"> <i class="fa fa-dollar" style="color:silver"></i>&emsp;Balance</label>
+            <label for="tab3" (click)="tabOpen()"> <i class='fa fa-exchange'></i>&emsp;Transactions </label>
+            <label for="tab4" (click)="tabOpen()"> <i class="fa fa-dollar" style="color:silver"></i>&emsp;Pay & Transfer </label>
+            <label for="tab5" (click)="tabOpen()"> <i class="fa fa-credit-card" style="color:silver"></i>&emsp;Manage Cards</label>
+            <label for="tab7" (click)="tabOpen()"> <i class="fa fa-file-pdf-o" style="color:silver"></i>&emsp;Bank Statements</label>
+            <label for="tab10" (click)="tabOpen()"> <i class="fa fa-bar-chart" style="color:silver"></i>&emsp;Statistics</label>
+            <label for="tab8" (click)="tabOpen()"> <i class="fa fa-bank" style="color:silver"></i>&emsp;Account</label>
+            <label for="tab9" (click)="tabOpen()"> <i class="fa fa-address-book" style="color:silver"></i>&emsp;Address</label>
+            <label for="tab6" (click)="tabOpen()"> <i class="fa fa-user" style="color:silver" aria-hidden="true"></i>&emsp;Profile</label>
+        </section>
+        <input name="tab" id="tab1" type="radio" />
+        <section class="tab-content" [style.display]="tabFlag">
+            <div style="width:100%;height:250px;">
+                <div style="height:50px;width: 100%;background-color: #D3D3D3;border-radius: 10px;">
+                    <br>
+                    <marquee style="color:black;animation: scroll 20s linear infinite;">
+                        Welcome back <b style="color: red;">{{userObject.firstName}} {{userObject.lastName}}</b> To Online Banking System</marquee>
+                </div>
+                <br>
+                <h2>Hello <b style="color:royalblue;">{{userObject.firstName}} {{userObject.lastName}}</b> Welcome to Online
+                    Banking</h2>
+        
+                <div class="main">
+                    <hr style="color: blue;">
+                    <div class="row">
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/creditCerti.JPG" class="image" alt="Checking & Savings" style="width:100%">
+                                <br><h4>Accounts</h4>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/creditCard.JPG" class="image" alt="CreditCard" style="width:100%">
+                                <h3 style="color:blue;">Credit Cards</h3>
+                            </div>
+        
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/homeLoan.JPG" class="image" alt="Home Loans" style="width:100%">
+                                <br><h5>Home Loans</h5>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/carLoan.JPG" class="image" alt="Automobile Loans" style="width:100%">
+                                <h3>Vehicle Loans</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="row">
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/Account1.JPG" class="image" alt="Checking & Savings" style="width:100%">
+                                <h3>Why Banking ?..</h3>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/Account2.JPG" class="image" alt="CreditCard" style="width:100%">
+                                <h3>Home Loans.....</h3>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/Account3.JPG" class="image" alt="Home Loans" style="width:100%">
+                                <h3>Online Banking</h3>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="../../assets/images/Account4.JPG" class="image" alt="Automobile Loans" style="width:100%">
+                                <h3>Vehicle Loans</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <input name="tab" id="tab7" type="radio" />
+        <section class="tab-content">
+            <div style="width:100%;height:250px;">
+                <h3>You Can Download your Banking History Statement. Please utilize our services </h3>
+            </div>
+        </section>
+        <input name="tab" id="tab2" type="radio" />
+        <section class="tab-content">
+            <h2> Balance</h2>
+            <section class="account-summary">
+                <h2>Account Summary</h2>
+                <div class="account-card">
+                    <h3>Checking Account</h3>
+                    <p style="font-size: 25px;">Account Number: {{userAccountObj.accountNumber}}</p>
+                    <p style="font-size: 25px;">Balance: ${{userAccountObj.currentBalance}}</p>
+                </div>
+                <div class="account-card">
+                    <h3>Savings Account</h3>
+                    <p style="font-size: 25px;">Account Number: {{userAccountObj.accountNumber}}</p>
+                    <p style="font-size: 25px;">Balance: ${{userAccountObj.savingsBalance}}</p>
+                </div>
+                <div class="account-card">
+                    <h3>Fixed Deposit</h3>
+                    <p style="font-size: 25px;">Balance: ${{userAccountObj.savingsBalance}}</p>
+                </div>
+            </section>
+        </section>
+
+        <input name="tab" id="tab3" type="radio" />
+        <section class="tab-content">
+            <h2> Transactions</h2>
+            <div id="box">
+                <div class="container rounded bg-white ">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">TransactionId</th>
+                            <th scope="col">TransactionDate</th>
+                            <th scope="col">Type</th>
+                            <!-- <th scope="col">sender</th> -->
+                            <th scope="col">received from</th>
+                            <th scope="col">BalanceBefore</th>
+                            <th scope="col">BalanceTransferred</th>
+                            <th scope="col">Balance</th>
+                            <th scope="col">TransactionStatus</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let t of transactionObject">
+                                <td>{{t.transactionId}}</td>
+                                <td>{{t.transactionDate}}</td>
+                                <td>{{t.transactionType}}</td>
+                                <!-- <td>{{t.sender}}</td> -->
+                                <td>{{t.receiver}}</td>
+                                <td>{{t.beforeAmount}}</td>
+                                <td>{{t.amountTransfer}}</td>
+                                <td>{{t.afterAmount}}</td>
+                                <td>{{t.transactionStatus}}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </section>
+
+        <input name="tab" id="tab4" type="radio" />
+        <section class="tab-content">
+            <button class="tablink" (click)="openPage('Zelle')"><i class='fa fa-usd' style="color:#120e7d;font-size: 25px;"></i>&emsp;Zelle</button>
+            <button class="tablink" (click)="openPage('bills')" id="defaultOpen"><i class='fa fa-cc-visa' style="color:#120e7d;font-size: 25px;"></i>&emsp;Pay Bills</button>
+            <button class="tablink" (click)="openPage('Transfer')"><i class='fa fa-money' style="color:#120e7d;font-size: 25px;"></i>&emsp;Transfer</button>
+
+            <div id="Zelle" class="tabcontent">
+                <h3>Zelle</h3>
+                <div class="search-box" style="margin-top: 20px;">
+                    <i class='fa fa-search' style="color:#120e7d;font-size: 30px;margin-left:10px;"></i>
+                    <input [(ngModel)]="search" (keyup)="onKeyUp()" type="text" placeholder="Search Phone Number registered with zelle" style="margin-top:10px;">
+                </div>
+                <br>
+                <ul style="background-color: #c2c2c2;list-style-type: none;width:43%;margin: auto;">
+                    <li *ngFor="let i of contactsCopy" (click)="select(i)" style="padding : 3px;border-bottom: 1px solid black;">
+                        {{i}}
+                    </li>
+                </ul>
+                <div class="zelleChat" *ngIf=zelleFlag>
+                    <div style="width:100%;height:15%;background-color: #020233;">
+                        <div id = "leftbox">
+                            <div style="height: 55px;width:55px;border-radius:50%;margin-left:15px;">
+                                <img *ngIf=imageSrcFlag1 class="rounded-circle bg-dark" height=auto [src]="imageSrc">
+                                <img *ngIf=imageSrcFlag2 src="../../assets/images/User.png" class="rounded-circle" height=auto >
+                            </div>
+                        </div> 
+                        <div id = "middlebox">
+                            <p>From {{userObject.firstName}} to {{selectedUser.firstName}}</p>
+                        </div>
+                        <div id = "rightbox">
+                            <div style="height: 55px;width:55px;border-radius:50%;margin-left:15px;">
+                                <img *ngIf=imageSrcFlag3 class="rounded-circle bg-dark" height=auto [src]="imageSrcSel">
+                                <img *ngIf=imageSrcFlag4 src="../../assets/images/User.png" class="rounded-circle" height=auto >
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:250px;overflow-y: auto;background-color: white;">
+                        <div *ngFor="let tran of transactionList" class="container1">
+                            <div *ngIf="tran.flag === 'sender'; then senderBlock else receiverBlock">
+                            </div>
+                            <ng-template #senderBlock>
+                                <div *ngIf="tran.flag == 'sender'" class="left">
+                                    <p>{{tran.amount}}</p>
+                                </div>
+                            </ng-template>
+                            <ng-template #receiverBlock>
+                                <div *ngIf="tran.flag === 'receiver'" class="right">
+                                    <p>{{tran.amount}}</p>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input class="input-box" type="text" [(ngModel)]="zelAmount"
+                                placeholder="Enter Money to transfer">
+                            <p></p>
+                        </div>
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                (click)="sendButton()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-refresh"
+                                (click)="sendButton()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutZelle" *ngIf=defaultFlag>
+                <section>
+                    <h2>About Zelle</h2>
+                    <p style="color: #666;font-size: 16px;">Zelle is a fast, safe, and easy way to send and receive money with friends, family, and people you trust. It's available in the United States and is supported by many major banks and financial institutions.</p>
+                    
+                    <h3>Key Features:</h3>
+                    <ul style="list-style-type: none;">
+                      <li><i class="fa fa-check-circle"></i> Instant Money Transfer</li>
+                      <li><i class="fa fa-check-circle"></i> Secure Transactions</li>
+                      <li><i class="fa fa-check-circle"></i> Easy-to-Use Mobile App</li>
+                      <li><i class="fa fa-check-circle"></i> No Fees for Most Users</li>
+                    </ul>
+                  
+                    <p>With Zelle, you can split bills, pay for group dinners, send birthday money, and much more, all from your smartphone or computer.</p>
+                  </section>
+                  
+            </div>
+            <div id="bills" class="tabcontent">
+                <h3>Pay Bills every month by Enabling Auto Pay feature, and get Relaxed.</h3>
+                <div class='parent'>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon">
+                                    <img src="../../assets/images/OTT/netflix.png" width="60px" height="60px">
+                                </div>
+                                 <span style="margin-bottom: 10px;">Netflix</span>
+                            </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 20$/.</pre>
+                            <pre>Date of Pay  : 6 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="netflix">Enable AutoPay</label><br>
+                            <input type="checkbox" id="netflix" [(ngModel)]="netflix" name="netflix">
+                        </div>
+                    </div>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon">
+                                   <img src="../../assets/images/OTT/primeLogo2.jpeg" width="60px" height="60px">
+                                </div>
+                                <span>Prime</span>
+                            </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 15$/.</pre>
+                            <pre>Date of Pay  : 4 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="prime">Enable AutoPay</label><br>
+                            <input type="checkbox" id="prime" name="prime" [(ngModel)]="prime">
+                        </div>
+                    </div>
+                </div>
+                <div class='parent'>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon">
+                                   <img src="../../assets/images/OTT/hulu.jpeg" width="60px" height="60px">
+                                </div>
+                                <span>hulu</span>
+                             </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 20$/.</pre>
+                            <pre>Date of Pay  : 6 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="hulu">Enable AutoPay</label><br>
+                            <input type="checkbox" id="hulu" name="hulu" [(ngModel)]="hulu" >
+                        </div>
+                    </div>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon">
+                                   <img src="../../assets/images/OTT/appleTv.png" width="60px" height="60px">
+                                </div>
+                                <span>Apple tv</span>
+                             </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 20$/.</pre>
+                            <pre>Date of Pay  : 6 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="appleTv">Enable AutoPay</label><br>
+                            <input type="checkbox" id="appletv" name="appletv" [(ngModel)]="appleTv">
+                        </div>
+                    </div>
+                </div>
+                <div class='parent'>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon" >
+                                   <img src="../../assets/images/OTT/disney.jpeg" width="55px" height="55px">
+                                </div>
+                                <span>Disney tv</span>
+                            </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 20$/.</pre>
+                            <pre>Date of Pay  : 6 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="disneyStar">Enable AutoPay</label><br>
+                            <input type="checkbox" id="disneyStar" name="disneyStar" [(ngModel)]="disneyStar">
+                        </div>
+                    </div>
+                    <div class='child'>
+                        <div class="wrapper">
+                            <div class="button">
+                                <div class="icon">
+                                   <img src="../../assets/images/OTT/youtubeTv.jpeg" width="60px" height="60px">
+                                </div>
+                                <span>Youtube tv</span>
+                             </div>
+                        </div>
+                        <div class='child1'>
+                            <pre>Total Amount : 20$/.</pre>
+                            <pre>Date of Pay  : 6 th.</pre>
+                        </div>
+                        <div class='child1'>
+                            <label for="youtubeTv">Enable AutoPay</label><br>
+                            <input type="checkbox" id="youtubeTv" name="youtubeTv" [(ngModel)]="youtubeTv">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-primary" style="border-radius: 5px;padding:2px;" (click)="saveAutoPay()">Save</button>
+            </div>
+
+            <div id="Transfer" class="tabcontent">
+                <h3>Wire Transfer</h3>
+                <h1>Account to Account Money Transfer</h1>
+    <form method="post">
+        <label for="from_account">From Account:</label>
+        <input type="text" name="from_account" id="from_account" [(ngModel)]="userAccountObj.accountNumber" disabled required style="color:red;"><br>
+
+        <label for="to_account">To Account:</label>
+        <input type="text" name="to_account" id="to_account" [(ngModel)]="to_account" required><br>
+
+        <label for="amount">Amount in ($):</label>
+        <input type="number" name="amount" id="amount" required><br>
+        <br>
+        <input type="submit" (click)="transferMoney()" value="Transfer Money">
+    </form>
+            </div>
+        </section>
+
+        <input name="tab" id="tab5" type="radio" />
+        <section class="tab-content">
+            <h2> Manage Debit / Credit Card </h2>
+            <div class="container-xl px-4 mt-4">
+                <hr class="mt-0 mb-4">
+                <app-debit-or-credit></app-debit-or-credit>
+            </div>
+        </section>
+
+        <input name="tab" id="tab6" type="radio" />
+        <section class="tab-content">
+            <hr style="color: blue;">
+            <div class="backgroundImage" >
+                <div id="box">
+                    <div class="container rounded">
+                        <div class="row">
+                            <div class="col-md-3 border-right" >
+                                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                    <div class="rounded-circle mt-2 mb-2" style="width: 200px;height: 200px;border-radius: 50%;">
+                                        <img *ngIf=imageSrcFlag1 class="rounded-circle mt-2 mb-2 bg-dark" width="200px" height=auto [src]="imageSrc">
+                                        <img *ngIf=imageSrcFlag2 src="../../assets/images/User.png" class="rounded-circle mt-2 mb-2" width="200px" height=auto >
+                                    </div>
+                                    <div class="card-body text-center mt-2">
+                                        <form (ngSubmit)="SubmitProfilePic()" enctype="multipart/form-data">
+                                        <input style="margin-left:100px;" type="file" (change)="onFileChange($event)" accept=".jpg, .jpeg, .png" />
+                                        <button class="btn btn-primary mt-2" type="submit">Save Image</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5" >
+                                <div>
+                                    <table style="width:90%;margin-right: 15px;">
+                                        <tr><th>UserId</th><th> : </th><td><input type="text" disabled [(ngModel)]="userObject.userId"></td></tr>
+                                        <tr><th>FirstName</th><th> : </th><td><input type="text" [(ngModel)]="userObject.firstName"></td></tr>
+                                        <tr><th>LastName</th><th> : </th><td><input type="text" [(ngModel)]="userObject.lastName"></td></tr>
+                                        <tr><th>Email</th><th> : </th><td><input type="text" disabled [(ngModel)]="userObject.email"></td></tr>
+                                        <tr><th>Mobile</th><th> : </th><td><input type="text" [(ngModel)]="userObject.mobile"></td></tr>
+                                        <tr><th>Password</th><th> : </th><td><input type="text" [(ngModel)]="userObject.password"></td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-right" >
+                                <table style="width: 100%;">
+                                    <tr><th>Age</th><th> : </th><td><input type="text"disabled [(ngModel)]="userObject.age"></td></tr>
+                                    <tr><th>Date Of Birth</th><th> : </th><td><input type="date" [(ngModel)]="userObject.dob"></td></tr>
+                                    <tr><th>Maritial Status</th><th> : </th>
+                                        <td>
+                                            <select name="maritialstatus" id="maritialstatus" [(ngModel)]="userObject.maritialStatus">
+                                                <option value="Married">Married</option>
+                                                <option value="UnMarried">UnMarried</option>
+                                                <option value="Divorced">Divorced</option>
+                                                <option value="Widowed">Widowed</option>
+                                                <option value="Separated">Separated</option>
+                                            </select>
+                                        </td></tr>
+                                    <tr><th>Citizen</th><th> : </th><td><input type="text" [(ngModel)]="userObject.citizen"></td></tr>
+                                    <tr><th>Gender</th><th> : </th><td>
+                                        <select name="gender" id="gender" [(ngModel)]="userObject.gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Others">Others</option>
+                                          </select>
+                                    </td></tr>
+                                    <tr><th><button class="btn btn-primary mt-2" type="submit" (click)="saveUserInfo()">Save User Info</button></th></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <input name="tab" id="tab8" type="radio" />
+        <section class="tab-content">
+            <h2> Account </h2>
+            <div class="container-xl px-4 mt-4">
+                <hr class="mt-0 mb-4">
+                <table style="width: 75%;background-color: #f0f0f0;">
+                    <tr><th>Account UserName</th><td>:</td><td>{{userAccountObj.userId}}</td></tr>
+                    <tr><th>Account Holder</th><td>:</td><td>{{userObject.firstName}} {{userObject.lastName}}</td></tr>
+                    <tr><th>Account Number</th><td>:</td><td>{{userAccountObj.accountNumber}}</td></tr>
+                    <tr><th>Account type</th><td>:</td><td>{{userAccountObj.accountType}}</td></tr>
+                    <tr><th>Account Date opened</th><td>:</td><td>{{userAccountObj.dateOpened}}</td></tr>
+                    <tr><th>Account Status</th><td>:</td><td>{{userAccountObj.accountStatus}}</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <input name="tab" id="tab10" type="radio" />
+        <section class="tab-content">
+            <h2> Account Statistics </h2>
+            <div class="container-xl px-4 mt-4">
+                <hr class="mt-0 mb-4">
+                <!-- <canvas baseChart
+              [data]="chartData"
+              [labels]="chartLabels"
+              [options]="chartOptions"
+              [chartType]="chartType"
+              >
+      </canvas> -->
+      <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            </div>
+        </section>
+
+        <input name="tab" id="tab9" type="radio" />
+        <section class="tab-content">
+            <h2> Address Details of <b style="color: red;">{{userObject.firstName}} {{userObject.lastName}}</b></h2>
+            <div class="container-xl px-4 mt-4">
+                <hr class="mt-0 mb-4">
+                <table>
+                    <tr><th><b>USER ID</b></th><td> : </td><td>{{userAddressObj.userId}}</td></tr>
+                    <tr><th><b>STREET</b></th><td> : </td><td>{{userAddressObj.street}}</td></tr>
+                    <tr><th><b>LANDMARK</b></th><td> : </td><td>{{userAddressObj.landMark}}</td></tr>
+                    <tr><th><b>STATE</b></th><td> : </td><td>{{userAddressObj.state}}</td></tr>
+                    <tr><th><b>BUILDING</b></th><td> : </td><td>{{userAddressObj.building}}</td></tr>
+                    <tr><th><b>COUNTRY</b></th><td> : </td><td>{{userAddressObj.country}}</td></tr>
+                    <tr><th><b>PINCODE</b></th><td> : </td><td>{{userAddressObj.pincode}}</td></tr>
+                </table>
+            </div>
+        </section>
+    </section>
+</div>

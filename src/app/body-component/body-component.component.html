@@ -1,0 +1,107 @@
+<section class="hero">
+  <div class="container"></div>
+</section>
+
+<section>
+    <div style="height: 75vh;padding: 30px 30px;">
+        <div id="leftbox">
+            <div class="bodyDivTwo"></div>
+        </div>
+        <div id="rightbox" style="height:65vh;">
+            <section id="book-appointment">
+                <h2>Book Your Appointment</h2>
+                <hr style="color:blue;">
+                <p>We know your time is valuable. Our specialists are ready with advice and guidance to help when you're ready.</p>
+                <p>Can you find an available slot for me to discuss on your clarifications</p>
+                <p>Remember to provide mandatory documents and reason for the appointment to make the scheduling process smoother.</p>
+                <p>To schedule an appointment with us, please fill out the form below:</p>
+                <button id="myBtn" class="button" (click)="bookAppointment()">Book Appointment Online <i class="fa fa-calendar" aria-hidden="true"></i></button>
+                <br><br>
+                <button id="myBtn" class="button" (click)="viewAppointment()">View Appointment Schedule <i class="fa fa-calendar" aria-hidden="true"></i></button>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section id="book-appointment" style="margin: 10px 30px;">
+  <h2>Safety Measures for Your Financial Security</h2>
+  <hr style="color:blue;">
+  <p>At XYZ Bank, we prioritize the security of your financial information. We have implemented a range of safety measures to ensure your accounts and transactions are protected:</p>
+    <ul>
+      <li>
+        <strong>Encryption:</strong> All data transmitted between your device and our servers is encrypted using industry-standard encryption protocols, ensuring your information remains confidential.
+      </li>
+      <li>
+        <strong>Multi-factor Authentication:</strong> We employ multi-factor authentication to add an extra layer of security when you log in or perform sensitive transactions. This means you'll need more than just a password to access your account.
+      </li>
+      <li>
+        <strong>Regular Security Audits:</strong> Our systems undergo regular security audits and assessments to identify and mitigate potential vulnerabilities.
+      </li>
+      <li>
+        <strong>Fraud Detection:</strong> We use advanced fraud detection algorithms to monitor transactions for any suspicious activity, helping to protect you from unauthorized transactions.
+      </li>
+      <li>
+        <strong>24/7 Monitoring:</strong> Our dedicated security team monitors your accounts 24/7 to detect and respond to any security threats in real-time.
+      </li>
+    </ul>
+    <p>We also recommend that you take certain precautions to enhance your online banking security:</p>
+    <ul>
+      <li>Keep your login credentials (username and password) confidential and do not share them with anyone.</li>
+      <li>Regularly update your password and use a combination of letters, numbers, and special characters for a strong password.</li>
+      <li>Be cautious of phishing emails and never click on suspicious links or provide personal information in response to unsolicited messages.</li>
+      <li>Log out of your account when you're finished and ensure you're using a secure and trusted network when accessing online banking.</li>
+    </ul>
+    <p>Your security is our top priority. If you ever have concerns or notice any unusual activity in your account, please contact our customer support immediately.</p>
+    <a href="https://www.forbes.com/advisor/banking/how-to-protect-your-online-banking-information/" target="_blank" class="button">Learn More</a>
+</section>
+
+  <section class="features">
+    <div class="container">
+        <h3>Why Choose Lamar Online Banking?</h3>
+        <div class="feature">
+            <img src="../../assets/images/security.JPG" alt="Security Icon">
+            <h4>Security</h4>
+        </div>
+        <div class="feature">
+            <img src="../../assets/images/Convience.JPG" alt="Convenience Icon">
+            <h4>Convenience</h4>
+        </div>
+        <div class="feature">
+            <img src="../../assets/images/CustomerSupport.JPG" alt="Support Icon">
+            <h4>Customer Support</h4>
+        </div>
+    </div>
+</section>
+
+<div class="modal" [style.display]="loginId">
+    <form class="modal-content animate">
+        <div style="padding: 30px 20px 10px 30px;">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="userName" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="password" required>
+            <button type="button" (click)="userLogin()" class="loginbtn">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" (click)="close()" class="btn-danger cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#" (click)="forgotPasswordMethod()">password?</a></span>
+        </div>
+    </form>
+</div>
+
+<div class="modal1" [style.display]="forgotPassword">
+  <form class="modal-content animate">
+    <span class="close" (click)="close1()">&times;</span>
+      <div style="padding: 50px 20px 10px 30px;">
+          <b style="color: green;align-items: center;">Please Let Know your Username. if its valid will trigger an email with password.</b>
+          <br>
+          <label for="userNameForgot"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username ..." name="userNameForgot" [(ngModel)]="userNameForgot" required>
+          <button type="button" (click)="remainderPassword()" style="margin: auto;" class="btn-success">Remainder Password</button>
+      </div>
+  </form>
+</div>
+<app-chatbot></app-chatbot>
